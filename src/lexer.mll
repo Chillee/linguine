@@ -59,6 +59,7 @@ rule read = parse
   | "void"          { VOID }
   | "return"        { RETURN }
   | "declare"       { DECLARE }
+  | "genType"       { GENTYPE }
   | "attribute"
   | "const"
   | "uniform"

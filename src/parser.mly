@@ -32,7 +32,6 @@ let vec = Str.regexp "vec\\([0-9]+\\)"
 %token GETS
 %token EQ
 %token LEQ
-%token LT
 %token AND
 %token OR
 %token NOT
@@ -56,6 +55,8 @@ let vec = Str.regexp "vec\\([0-9]+\\)"
 %token DECLARE
 %token COLON
 %token BACKTICK
+%token GENTYPE
+
 
 (* Precedences *)
 
@@ -189,6 +190,8 @@ comm:
 typ:
   | BACKTICK; e = ID
       { AbsTyp(e) }
+  | GENTYPE
+      { GenTyp }
   | BOOLTYP                         
       { BoolTyp }
   | FLOATTYP                        
