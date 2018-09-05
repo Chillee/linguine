@@ -40,6 +40,8 @@ rule read = parse
   | ".*"            { CTIMES }
   | "["             { LBRACK }
   | "]"             { RBRACK }
+  | "<"             { LWICK }
+  | ">"             { RWICK }
   | "{"             { LBRACE }
   | "}"             { RBRACE }
   | "("             { LPAREN }
